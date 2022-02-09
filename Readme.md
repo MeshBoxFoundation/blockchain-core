@@ -1,1 +1,1 @@
-# blockchain-core-go
+# blockchain-core go implementation
