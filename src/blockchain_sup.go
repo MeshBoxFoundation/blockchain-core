@@ -33,10 +33,10 @@ func (ds *BnCoreSup) Init(args ...etf.Term) (gen.SupervisorSpec, error) {
 			// Type:      gen.SupervisorStrategyRestForOne,
 			// Type:      gen.SupervisorStrategyOneForOne,
 			Intensity: 2,
-			Period:    5,
-			Restart:   gen.SupervisorStrategyRestartTemporary,
+			Period:    5000,
+			//Restart:   gen.SupervisorStrategyRestartTemporary,
 			// Restart: gen.SupervisorStrategyRestartTransient,
-			// Restart: gen.SupervisorStrategyRestartPermanent,
+			Restart: gen.SupervisorStrategyRestartPermanent,
 		},
 	}
 	return spec, nil
