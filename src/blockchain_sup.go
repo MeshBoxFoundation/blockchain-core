@@ -17,16 +17,6 @@ func (ds *BnCoreSup) Init(args ...etf.Term) (gen.SupervisorSpec, error) {
 				Name:  "bnServer01",
 				Child: &BnCoreGenServ{},
 			},
-			gen.SupervisorChildSpec{
-				Name:  "bnServer02",
-				Child: &BnCoreGenServ{},
-				Args:  []etf.Term{12345},
-			},
-			gen.SupervisorChildSpec{
-				Name:  "bnServer03",
-				Child: &BnCoreGenServ{},
-				Args:  []etf.Term{"abc", 67890},
-			},
 		},
 		Strategy: gen.SupervisorStrategy{
 			Type: gen.SupervisorStrategyOneForAll,
